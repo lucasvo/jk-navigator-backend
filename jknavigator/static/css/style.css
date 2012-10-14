@@ -1,0 +1,274 @@
+@import "base.css";
+
+@import "skeleton.css";
+
+@import "layout.css";
+
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+
+body {
+  font-family: 'Lucida Grande', sans-serif;
+  color: #051018;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lucida Grande', sans-serif;
+  color: #324350;
+}
+
+.header .logo {
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 959px) {
+  .sitelogos {
+    display: none;
+  }
+}
+
+.sitelogos {
+  float: right;
+}
+
+.sitelogos img {
+  height: 470px;
+  margin: 10px 0 20px;
+}
+
+.introimage {
+  margin: 20px 0 40px 0;
+  vertical-align: middle;
+}
+
+.keys {
+  display: inline-block;
+  height: 183px;
+  padding: 10px 0 0 0;
+  vertical-align: middle;
+}
+
+.keys .key {
+  display: block;
+  width: 180px;
+  height: 50px;
+  margin: 0 20px 10px 0px;
+}
+
+.keys .key img {
+  display: inline;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Intro */
+
+.intro hr {
+  margin-bottom: 0;
+}
+
+.intro .addthis_toolbox {
+  display: inline-block;
+  vertical-align: center;
+}
+
+/* Sections */
+
+.section {
+  margin-top: 30px;
+}
+
+.section.userguide {
+  margin-top: 5px;
+}
+
+.userguide .keyboard-shortcuts {
+  margin-left: 24px;
+}
+
+.userguide .keyboard-shortcuts span,
+.userguide em {
+  display: inline-block;
+  padding: 2px 5px;
+  font-style: normal;
+  background-color: #f4f4f4;
+  border: 1px solid #d0d0d0;
+  -moz-border-radius: 3px;
+       border-radius: 3px;
+}
+
+.customsites table {
+  width: 600px;
+}
+
+.customsites td {
+  padding-top: 10px;
+  padding-right: 15px;
+  line-height: 120%;
+}
+
+.customsites tr > td:first-child {
+  font-family: monospace;
+  font-weight: bold;
+  color: #222;
+}
+
+.contributing .github-btn {
+  display: inline-block;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.about {
+  margin-bottom: 80px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footer .featherborder {
+  width: 100%;
+  height: 20px;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255, 255, 254, 0.95)), color-stop(1, rgba(255, 255, 255, 0)));
+  background: -ms-linear-gradient(bottom, rgba(255, 255, 254, 0.95), rgba(255, 255, 255, 0));
+  background: -moz-linear-gradient(center bottom, rgba(255, 255, 254, 0.95) 0, rgba(255, 255, 255, 0) 100%);
+}
+
+.footer .container {
+  padding: 10px 0;
+  font-size: 11px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.footer .container p {
+  display: inline;
+}
+
+/* Image with shadow */
+
+.shadowimg {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: box-shadow ease-in-out 0.6s;
+     -moz-transition: box-shadow ease-in-out 0.6s;
+     -moz-transition: all box-shadow ease-in-out 0.6s ease-out;
+       -o-transition: box-shadow ease-in-out 0.6s;
+          transition: box-shadow ease-in-out 0.6s;
+  transition: all box-shadow ease-in-out 0.6s ease-out;
+}
+
+/* NAVIGATION */
+
+.navigation {
+  z-index: 100;
+}
+
+.navigation .featherborder {
+  width: 100%;
+  height: 20px;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255, 255, 255, 0)), color-stop(1, #ffffff));
+  background: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0), #ffffff);
+  background: -moz-linear-gradient(center bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+}
+
+.navigation ul {
+  padding: 20px 0 20px 0;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.navigation ul li.title {
+  font-weight: bold;
+}
+
+.navigation ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+/* INSTALLATION BUTTON */
+
+#installextbutton {
+  float: right;
+}
+
+#installcontent {
+  margin-left: 20px;
+}
+
+.installbutton {
+  min-width: 90px;
+  padding: 8px 12px;
+  margin-top: 9px;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-size: 13px;
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  cursor: pointer;
+  cursor: pointer;
+  background-color: #4D7BD6;
+  background-image: -webkit-linear-gradient(top, #5689db 0%, #4d7bd6 100%);
+  background-image: -moz-linear-gradient(top, #5689db 0%, #4d7bd6 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5689db), color-stop(100%, #4d7bd6));
+  background-image: linear-gradient(top, #5689db 0%, #4d7bd6 100%);
+  background-image: -o-linear-gradient(top, #5689db 0%, #4d7bd6 100%);
+  background-image: -ms-linear-gradient(top, #5689db 0%, #4d7bd6 100%);
+  border: 1px solid;
+  border-color: #2D53AF;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  outline: 0;
+  outline: 0;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#5689db, endColorstr=#4d7bd6, GradientType=0);
+  -webkit-box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.06) inset, 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.06) inset, 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.06) inset, 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.06) inset, 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.06) inset, 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 0 0 rgba(255, 255, 255, 0.06) inset, 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.installbutton:hover {
+  color: #fff;
+  background-color: #5C92FF;
+  background-image: -moz-linear-gradient(top, #669eff 0%, #5286ff 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #669eff), color-stop(100%, #5286ff));
+  background-image: -webkit-linear-gradient(top, #669eff 0%, #5286ff 100%);
+  background-image: -o-linear-gradient(top, #669eff 0%, #5286ff 100%);
+  background-image: -ms-linear-gradient(top, #669eff 0%, #5286ff 100%);
+  background-image: linear-gradient(top, #669eff 0%, #5286ff 100%);
+  border-color: #4076FF;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr=#669eff, endColorstr=#5286ff, GradientType=0);
+}

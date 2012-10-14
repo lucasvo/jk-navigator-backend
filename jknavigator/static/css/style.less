@@ -1,0 +1,223 @@
+@import "elements.less";
+@import "base.css";
+@import "skeleton.css";
+@import "layout.css";
+
+body { 
+  font-family:'Lucida Grande', sans-serif; 
+  color:#051018;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family:'Lucida Grande', sans-serif; 
+  color:#324350;
+}
+
+.header {
+  .logo {
+    vertical-align:middle;
+    margin-right:7px;
+  }
+}
+.subtitle {
+  margin-bottom:30px;
+}
+@media only screen and (max-width: 959px) { 
+  .sitelogos {
+    display:none;
+  }
+}
+.sitelogos {
+  float:right;
+  img { 
+    margin:10px 0 20px;
+    height:470px;
+  }
+}
+.introimage {
+  margin:20px 0 40px 0;
+  vertical-align:middle;
+}
+.keys { 
+  height:183px;
+  padding:10px 0 0 0px; 
+  display:inline-block; 
+  vertical-align:middle;
+
+  .key {
+    display:block;
+    height:50px;
+    width:180px;
+    margin:0px 20px 10px 0px;
+    img {
+      display:inline;
+      vertical-align:middle;
+      margin-right:10px;
+    }
+  }
+}
+/* Intro */
+.intro {
+  hr { margin-bottom:0px; }
+  .addthis_toolbox {
+    display:inline-block;
+    vertical-align:center;
+  }
+}
+
+/* Sections */
+.section {
+  margin-top:30px;
+}
+.section.userguide {
+  margin-top:5px;
+}
+
+.userguide {
+  .keyboard-shortcuts {
+    margin-left:24px;
+  }
+
+  .keyboard-shortcuts span, em {
+    font-style:normal;
+    display:inline-block;
+    padding:2px 5px;
+    border:1px solid #d0d0d0;
+    background-color:#f4f4f4;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+}
+
+.customsites {
+  table { width:600px; }
+  td { padding-top:10px; padding-right:15px; line-height:120%; }
+  tr>td:first-child { font-family:monospace; font-weight:bold; color:#222; }
+}
+.contributing {
+  .github-btn { 
+    display:inline-block;
+    margin-left:2px;
+    vertical-align:middle;
+  }
+}
+.about { 
+  margin-bottom:80px;
+}
+.footer {
+  position:fixed;
+  margin-top:10px;
+  width:100%;
+  bottom:0;
+
+  .featherborder {
+    height:20px;
+    width:100%;
+    .gradient(#fff, rgba(255,255,254,0.95), rgba(255,255,255,0));
+  }
+  .container {  
+    background-color:#fff;
+    border-top:1px solid #ddd;  padding:10px 0; 
+    font-size:11px;
+     p { display:inline; }
+
+  }
+}
+
+/* Image with shadow */
+.shadowimg {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+  -webkit-transition: box-shadow ease-in-out .6s;
+  -moz-transition: box-shadow ease-in-out .6s;
+  -o-transition: box-shadow ease-in-out .6s;
+  transition: box-shadow ease-in-out .6s;
+  -moz-transition: all box-shadow ease-in-out .6s ease-out;
+  transition: all box-shadow ease-in-out .6s ease-out;
+}
+
+
+
+/* NAVIGATION */
+.navigation {
+  z-index:100;
+  width:100%;
+  .featherborder {
+    width:100%;
+    height:20px;
+    .gradient(#fff, rgba(255,255,255,0), rgba(255,255,255,1));
+  }
+  ul {
+    width:100%;
+    background-color:#fff;
+    margin-bottom:0px;
+    padding:20px 0 20px 0;
+    li.title {
+      font-weight:bold;
+    }
+    li {
+      display:inline;
+      margin-right:30px;
+    }
+  }
+
+}
+
+/* INSTALLATION BUTTON */
+#installextbutton {
+  float:right;
+}
+#installcontent {
+  margin-left:20px;
+}
+.installbutton {
+  min-width:90px;
+  margin-top:9px;
+  font-family: 'Open Sans',arial,sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 0 0 rgba(255, 255, 255, .06) inset,0 2px 3px 0 rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 2px 0 0 rgba(255,255,255,.06) inset,0 2px 3px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 0 0 rgba(255, 255, 255, .06) inset,0 2px 3px 0 rgba(0, 0, 0, .2);
+  outline: 0px;
+  border-color: #2D53AF;
+  background-color: #4D7BD6;
+  background-image: -moz-linear-gradient(top,#5689DB 0%,#4D7BD6 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#5689DB),color-stop(100%,#4D7BD6));
+  background-image: -webkit-linear-gradient(top,#5689DB 0%,#4D7BD6 100%);
+  background-image: -o-linear-gradient(top,#5689DB 0%,#4D7BD6 100%);
+  background-image: -ms-linear-gradient(top,#5689DB 0%,#4D7BD6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5689db,endColorstr=#4d7bd6,GradientType=0);
+  background-image: linear-gradient(top,#5689DB 0%,#4D7BD6 100%);
+  padding:8px 12px;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  font-weight:lighter;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 2px 0 0 rgba(255, 255, 255, .06) inset,0 2px 3px 0 rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 2px 0 0 rgba(255,255,255,.06) inset,0 2px 3px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 0 0 rgba(255, 255, 255, .06) inset,0 2px 3px 0 rgba(0, 0, 0, .2);
+  outline: 0px;
+}
+
+
+.installbutton:hover {
+color:#fff;
+border-color: #4076FF;
+background-color: #5C92FF;
+background-image: -moz-linear-gradient(top,#669EFF 0%,#5286FF 100%);
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#669EFF),color-stop(100%,#5286FF));
+background-image: -webkit-linear-gradient(top,#669EFF 0%,#5286FF 100%);
+background-image: -o-linear-gradient(top,#669EFF 0%,#5286FF 100%);
+background-image: -ms-linear-gradient(top,#669EFF 0%,#5286FF 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#669eff,endColorstr=#5286ff,GradientType=0);
+background-image: linear-gradient(top,#669EFF 0%,#5286FF 100%);
+}
+
+

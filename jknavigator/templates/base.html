@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+  <title>JK Navigator: Browse the web like a pro - never touch your mouse again!</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/chgfodomgimhbcmlfljhkgildehakgif">
+ 
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='jquery.sticky-div.js') }}"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35124467-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+  <script>
+function installExtension() {
+  console.log('Click install');
+  chrome.webstore.install('https://chrome.google.com/webstore/detail/chgfodomgimhbcmlfljhkgildehakgif', 
+    function (e) {
+      console.log('Installation Triggered', e);
+    }, function (e) {
+      console.log('Installation Failed', e);
+    }); 
+}
+$(function () {
+  $('.installbutton').click(installExtension);
+
+  if (chrome.app.isInstalled) {
+    $('.installbutton').css({display:'none'});
+  }
+  $('.navigation').sticky_div();
+});
+
+  </script>
+	<div class="container">
+		<div class="sixteen columns header">
+      <h1 class="remove-bottom" style="margin-top: 40px">
+        <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="JK Logo" />
+        JK Navigator
+        <button class="installbutton" id="installextbutton"><span style="font-weight:bold;">+</span> Install JK Navigator</button>
+      </h1>
+      {#			<h5>Version 1.2</h5> #}
+			<hr />
+    </div>
+    <div class="sixteen columns intro">
+      <div class="twelve alpha columns">
+         <h3 class="subtitle">
+          Browse the web like a pro - <br />never touch your mouse again!
+        </h3>
+       
+        <p>
+          Cycle through links fast and effortless by using j/k instead of the mouse:
+        </p>
+
+        <div class="keys">
+          <div class="key okey">
+            <img width="48" src="{{ url_for('static', filename='img/o_key.png') }}" alt="J" />
+            <span>Open Result</span>
+          </div>
+          <div class="key kkey">
+            <img width="48" src="{{ url_for('static', filename='img/k_key.png') }}" alt="J" />
+            <span>Previous Result</span>
+          </div>
+          <div class="key jkey">
+            <img width="48" src="{{ url_for('static', filename='img/j_key.png') }}" alt="J" />
+            <span>Next Result</span>
+          </div>
+        </div>
+        <img class="introimage" src="{{ url_for('static', filename='img/intro_homepage.jpg') }}" style="clear:both;"/>
+
+        <p>
+            Install the JK Navigator in your Browser: 
+            <button class="installbutton" id="installcontent">Install JK Navigator</button>
+        </p>
+
+      </div>
+      <div class="four omega columns">
+        <div class="sitelogos">
+          <h4>Supported sites:</h4>
+          <img src="{{ url_for('static', filename='img/logo_collection.jpg') }}" alt="JK Instructions">
+        </div>
+      </div>
+        <hr />
+
+    </div>
+    <div class="sixteen columns">
+      <div class="navigation">
+        <ul>
+          <li class="title">Navigation:</li>
+          <li><a href="#userguide">Using the extension</a></li>
+          <li><a href="#customsites">Adding custom sites</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#bugs">Bugs</a></li>
+          <li><a href="#contributing">Contributing</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <div class="featherborder"></div>
+      </div>
+      <div class="section userguide">
+        <h3 id="userguide">Using the extension</h3>
+
+        <p>
+          Using the extension is fairly simple. Whenever you are on a pages where <em>j</em>/<em>k</em> is supported, you can use the following shortcuts to navigate through the list of links:
+        </p>
+        <ul class="keyboard-shortcuts">
+          <li><span>j</span> Next result</li>
+          <li><span>k</span> Previous result</li>
+          <li><span>i</span> Back to first position</li>
+          <li><span>o</span> or <span>Return</span> Open result</li>
+          <li><span>&#8984; + Return</span> Open result in new tab/window</li>
+          <li><span>/</span> Focus search box</li>
+        </ul> 
+
+        <p>Once you've opened the first link using <em>o</em> you can also cycle through the links without returning to the search page but just by pressing <em>j</em> or <em>k</em>.</p>
+
+        <p>To see whether a site is supported or not, there's a small indicator in the URL:</p>
+        <img src="{{ url_for('static', filename='img/url_indicator.jpg') }}" alt="URL Indicator Screenshot" />
+
+      </div> 
+      <div class="customsites section">
+        <h3 id="customsites">Adding custom sites</h3>
+        <p>Adding custom sites is easy but does require a knowing how to work with jQuery selectors.</p>
+ 
+        <p><strong>Site name:</strong> The sitename is the domain for which you'd like to add the site. It matches the domain by stripping the TLD and then checking if the string matches the domain. It also ignores the presence/absence of <i>www.</i>
+
+        <table id="table_explanation">
+          <tr><td>selectors:</td><td> css selector(s) for the links that we want to navigate.</td></tr>
+          <tr><td>paginator_selector_next:</td><td> css selector for the link that opens next page of results</td></tr>
+          <tr><td>paginator_selector_prev:</td><td> css selector for the link that opens next page of results</td></tr> 
+          <tr><td>allowSubdomains:</td><td> whether or not subdomains should trigger the jk navigator (www is not treated as subdomain here and will always work). docs.google.com for example has its own jk functionality and should not be broken through the one on google.com</td></tr>
+          <tr><td>search_selector:</td><td> css selector for the search input field</td></tr>
+          <tr><td>liveUpdateElement:</td><td> for pages with ajax, such as Google and Facebook, that load search results dynamically, we need to know the parent liveUpdate Element so that we can load jk at the right time when results are here.</td></tr>
+          <tr><td>infiniteScroll:</td><td> set to True if we have a page like Facebook or Quora that can dynamically load new links into the link list.</td></tr>
+        </table>
+      </div>
+
+      <div class="section privacy">
+        <h3 id="privacy">Privacy</h3>
+        <p>JK Navigator does nothing evil. There is no tracking and at no point in time is any behavior transmitted to jknavigator.org. The JK Navigator is available open source under an BSD License, you can go check out the source on github.com to find out more.{# TODO LINK #}</p>
+        <p>The only time we are ever transmitting any user data to jknavigator.org is when you add a custom site and chooose to submit the information to us. All this data is used for, is to determine which sites we should add next. The JK Navigator periodcally queries our server to update the default site configurations.</p>
+      </div>
+      <div class="bugs section">
+        <h3 id="bugs">Bugs</h3>
+        <p>If you find any bugs, please feel free to submit them in our <a href="https://github.com/flavio87/jk-navigator/issues">Github Issue Tracker.</a></p>
+      </div>
+
+      <div class="section contributing">
+        <h3 id="contributing">Contributing</h3>
+        <p>The JK Navigator including this site are licensed under the <a href="http://opensource.org/licenses/bsd-license.php">BSD License</a> and hosted on Github. Feel free to check it out, play around with it and improve it! And don't forget to send us a pullrequest if you've added something that might be interesting for everyone!</p>
+
+        <p>Chrome Extension: <a href="https://github.com/flavio87/jk-navigator/">github.com/flavio87/jk-navigator/</a> <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=flavio87&repo=jk-navigator&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe></p>
+        <p>jknavigator.org Website: <a href=https://github.com/lucasvo/jk-navigator-backend">github.com/lucasvo/jk-navigator-backend/</a> <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=lucasvo&repo=jk-navigator-backend&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe></p>
+
+      </div>
+
+      <div class="section about">
+        <h3 id="about">About</h3>
+        <p>The JK Navigator was built by Thomas, Flavio &amp; Lucas of <a href="https://elasticsales.com/about/">Elastic Inc.</a> and <a href="http://www.getsendtask.com/">SendTask</a> </p>
+      </div>
+
+    </div>
+
+    </div>
+	</div><!-- container -->
+
+  <div class="footer">
+    <div class="featherborder"></div>
+    <div class="container">
+      <div class="sixteen columns">
+        <p>&copy; 2012 Thomas Steinacher, Flavio Rump &amp; Lucas Vogelsang.</p>
+        <p>Available under the BSD License.</p>
+      </div>
+    </div>
+  </div>
+<!-- End Document
+================================================== -->
+</body>
+</html>

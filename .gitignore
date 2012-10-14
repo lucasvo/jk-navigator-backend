@@ -1,0 +1,11 @@
+.coverage
+*.pyc
+build/
+*.swo
+
+jknavigator/static/.webassets-manifest.json 
+jknavigator/static/js/all.js
+jknavigator/static/style/style.css
+
+.DS_Store
+

@@ -1,0 +1,25 @@
+werkzeug
+Flask
+Flask-mail
+Flask-Views
+coverage
+nose
+mimerender
+python-dateutil
+
+pymongo
+-e git+http://github.com/elasticsales/mongoengine.git#egg=mongoengine
+
+-e git+http://github.com/elasticsales/flask-admin.git#egg=flask-admin
+-e git+http://github.com/elasticsales/flask-mongoengine.git#egg=flask-mongoengine
+-e git+http://github.com/lucasvo/flask-mongorest.git@cd4e9655307194b544b679701443d2d8d2d2f6ff#egg=Flask-mongorest
+
+-e git+http://github.com/elasticsales/flask-assets.git#egg=Flask-Assets
+-e git+http://github.com/miracle2k/webassets.git#egg=webassets
+yuicompressor
+
+-e git+git://github.com/techniq/flask-script.git#egg=flask-script
+
+Fabric
+gunicorn
+gevent
