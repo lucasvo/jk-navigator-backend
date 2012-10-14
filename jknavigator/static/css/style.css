@@ -188,6 +188,7 @@ h6 {
 
 .navigation {
   z-index: 100;
+  width: 100%;
 }
 
 .navigation .featherborder {
@@ -200,6 +201,7 @@ h6 {
 }
 
 .navigation ul {
+  width: 100%;
   padding: 20px 0 20px 0;
   margin-bottom: 0;
   background-color: #fff;
