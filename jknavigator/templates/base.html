@@ -162,7 +162,7 @@ $(function () {
         <h3 id="customsites">Adding custom sites</h3>
         <p>Adding custom sites is easy but does require a knowing how to work with jQuery selectors.</p>
  
-        <p><strong>Site name:</strong> The sitename is the domain for which you'd like to add the site. It matches the domain by stripping the TLD and then checking if the string matches the domain. It also ignores the presence/absence of <i>www.</i>
+        <p>To add a site you need to do two things: <strong>Regex:</strong>Define a regex to match for sites you want to enable JK on and create a simple JSON object defining the selectors to use for it. The second part is defining the JSON object containing the selectors. It's easiest if you look at some of the built in sites for pointers on how to write them.</p>
 
         <table id="table_explanation">
           <tr><td>selectors:</td><td> css selector(s) for the links that we want to navigate.</td></tr>
